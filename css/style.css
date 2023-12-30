@@ -2846,7 +2846,7 @@ textarea.input {
   }
 
   .footer__policy:hover {
-    background-color: var(--rose);
+    color: var(--rose);
   }
 }
 
