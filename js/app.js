@@ -3587,7 +3587,9 @@
             observeParents: true,
             slidesPerView: 3,
             spaceBetween: 20,
+            slidesPerColumn: 2,
             speed: 800,
+            preloadImages: true,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true
@@ -3611,7 +3613,12 @@
                     spaceBetween: 20
                 }
             },
-            on: {}
+            on: {
+                init: function(swiper) {
+                    const allSlidesItems = document.querySelectorAll(".cases__slide.swiper-slide:not(.swiper-slide-duplicate)");
+                    console.log(allSlidesItems);
+                }
+            }
         });
         if (document.querySelector(".team__body")) new swiper_core_Swiper(".team__body", {
             modules: [ Navigation, Pagination ],
