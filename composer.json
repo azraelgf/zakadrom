@@ -1,0 +1,17 @@
+{
+  "name": "aner/zakadrom4k.ru",
+  "autoload": {
+    "psr-4": {
+      "Aner\\ModamarketingRu\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Anton",
+      "email": "aner-anton@yandex.ru"
+    }
+  ],
+  "require": {
+    "phpmailer/phpmailer": "^6.8"
+  }
+}
