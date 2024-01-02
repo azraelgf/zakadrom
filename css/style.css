@@ -1287,6 +1287,10 @@ textarea.input {
     min-height: 16.75rem;
   }
 
+  .case .video-block__img img {
+    min-height: 16.75rem;
+  }
+
   .footer .menu__btn {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 21.25rem;
@@ -1540,6 +1544,10 @@ textarea.input {
   }
 
   .case .video-block iframe {
+    min-height: 13.75rem;
+  }
+
+  .case .video-block__img img {
     min-height: 13.75rem;
   }
 
@@ -2377,6 +2385,18 @@ textarea.input {
     }
 }
 
+@supports (min-height: clamp( 13.75rem , 12.7803030303rem  +  4.8484848485vw , 16.75rem )) {
+    .case .video-block__img img {
+      min-height: clamp( 13.75rem , 12.7803030303rem  +  4.8484848485vw , 16.75rem );
+    }
+}
+
+@supports not (min-height: clamp( 13.75rem , 12.7803030303rem  +  4.8484848485vw , 16.75rem )) {
+    .case .video-block__img img {
+      min-height: calc(13.75rem + 3 * (100vw - 20rem) / 61.875);
+    }
+}
+
 @supports (gap: clamp( 1.25rem , 1.047979798rem  +  1.0101010101vw , 1.875rem )) {
     .menu__list {
       gap: clamp( 1.25rem , 1.047979798rem  +  1.0101010101vw , 1.875rem );
@@ -2846,7 +2866,7 @@ textarea.input {
   }
 
   .footer__policy:hover {
-    background-color: var(--rose);
+    color: var(--rose);
   }
 }
 
