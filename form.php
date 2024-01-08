@@ -23,7 +23,7 @@ $message = "Новая заявка:\n\n";
 $message .= "Имя: {$request->name}\n";
 $message .= "Телефон: {$request->phone}\n\n";
 
-$secret = include('/secret.php');
+$secret = include(__DIR__ . '/secret.php');
 
 try {
     //Server settings
