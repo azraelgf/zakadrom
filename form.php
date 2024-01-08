@@ -13,6 +13,7 @@ $recipients = [
 	'firstrinat@gmail.com', 
 	'Evrass999@yandex.ru',
 	'orlovaproduction@gmail.com',
+	'zakadromstudio@gmail.com',
 ];
 
 $mail = new PHPMailer(true);
