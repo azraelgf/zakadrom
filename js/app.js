@@ -3564,32 +3564,12 @@
         });
     }
     function initSliders() {
-        if (document.querySelector(".interior__body")) new swiper_core_Swiper(".interior__body", {
-            modules: [ Navigation, Pagination ],
-            observer: true,
-            observeParents: true,
-            slidesPerView: 1,
-            spaceBetween: 10,
-            speed: 800,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true
-            },
-            navigation: {
-                prevEl: ".swiper-button-prev",
-                nextEl: ".swiper-button-next"
-            },
-            on: {}
-        });
         if (document.querySelector(".cases__body")) new swiper_core_Swiper(".cases__body", {
             modules: [ Navigation, Pagination ],
             observer: true,
             observeParents: true,
-            slidesPerView: 3,
-            spaceBetween: 20,
-            slidesPerColumn: 2,
+            slidesPerView: 1,
             speed: 800,
-            preloadImages: true,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true
@@ -3613,19 +3593,31 @@
                     spaceBetween: 20
                 }
             },
-            on: {
-                init: function(swiper) {
-                    const allSlidesItems = document.querySelectorAll(".cases__slide.swiper-slide:not(.swiper-slide-duplicate)");
-                    console.log(allSlidesItems);
-                }
-            }
+            on: {}
+        });
+        if (document.querySelector(".interior__body")) new swiper_core_Swiper(".interior__body", {
+            modules: [ Navigation, Pagination ],
+            observer: true,
+            observeParents: true,
+            slidesPerView: 1,
+            spaceBetween: 10,
+            speed: 800,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true
+            },
+            navigation: {
+                prevEl: ".interior-button-prev",
+                nextEl: ".interior-button-next"
+            },
+            on: {}
         });
         if (document.querySelector(".team__body")) new swiper_core_Swiper(".team__body", {
             modules: [ Navigation, Pagination ],
             observer: true,
             observeParents: true,
-            slidesPerView: 3,
-            spaceBetween: 20,
+            slidesPerView: 1,
+            spaceBetween: 0,
             speed: 800,
             pagination: {
                 el: ".swiper-pagination",
