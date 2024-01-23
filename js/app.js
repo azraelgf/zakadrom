@@ -3839,6 +3839,24 @@
         return iframe;
     }
     videoInit(".video-block__value");
+    if (document.cookie.includes("hideModal")) ; else {
+        setTimeout((function() {
+            const subscribe = document.getElementById("subscribe");
+            document.documentElement.classList.add("popup-show");
+            subscribe.classList.add("popup_show");
+            bodyLock();
+        }), 15e3);
+        document.cookie = "hideModal=да; expires=Tue, 19 Jan 2038 03:14:07 GMT; path=/";
+    }
+    document.addEventListener("click", documentActions);
+    function documentActions(e) {
+        const targetElement = e.target;
+        if (targetElement.closest("[data-close]")) {
+            document.querySelector(".popup-show") ? document.querySelector(".popup-show").classList.remove("popup-show") : null;
+            document.querySelector(".popup_show") ? document.querySelector(".popup_show").classList.remove("popup_show") : null;
+            bodyUnlock();
+        }
+    }
     window["FLS"] = false;
     isWebp();
     menuInit();
