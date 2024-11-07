@@ -32,7 +32,15 @@ $subject = 'Заявка с сайта zakadrom4k.ru';
 $message = "Новая заявка:\n\n";
 
 $message .= "Имя: {$request->name}\n";
-$message .= "Телефон: {$request->phone}\n\n";
+
+$message .= "Телефон: {$request->phone}\n";
+
+if (!empty($request->email)) {
+	$message .= "Email: {$request->email}\n";
+}
+if (!empty($request->message)) {
+	$message .= "Сообщение: {$request->message}\n";
+}
 
 $secret = include(__DIR__ . '/secret.php');
 
